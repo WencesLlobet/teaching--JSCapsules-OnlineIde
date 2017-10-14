@@ -68,7 +68,7 @@ hola
     function doit(){
         document.getElementById("out").innerText = "";
         setTimeout( function() {
-          var code = "try{"+editor.session.getValue()+"}catch(e){console.log(e.stack);}";
+          var code = "try{"+editor.session.getValue()+"\n}catch(e){console.log(e.stack);}\n";
           eval( code);
           },300);  
     }
