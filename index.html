@@ -53,6 +53,8 @@ hola
     var url = new URL(url_string);
     var c = url.searchParams.get("code");
     if(c){
+      var bytes  = CryptoJS.AES.decrypt(c.toString(), 'dontstealhardworkjustwork');
+      c = bytes.toString(CryptoJS.enc.Utf8);
       editor.setValue(c);
     }else{
       editor.setValue("");
