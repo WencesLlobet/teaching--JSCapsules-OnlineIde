@@ -17,8 +17,10 @@
     }
   </style>
 </head>
-<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
 
+<body>
+<div id="koantitle"> </div>
 <div style="height: 550px;" id="container">
   <pre id="editor" height="100">
       function foo(items) {
@@ -52,10 +54,17 @@ hola
     var url_string = location.href;
     var url = new URL(url_string);
     var c = url.searchParams.get("code");
+
     if(c){
       var bytes  = CryptoJS.AES.decrypt(c.toString(), 'dontstealhardworkjustwork');
       c = bytes.toString(CryptoJS.enc.Utf8);
       editor.setValue(c);
+
+      var propsstr = url.searchParams.get("props");
+      if (propsstr) {
+        eval(propsstr);
+        document.getElementById("koantitle").innerText = "Level:"+props.level+" Subject:"+props.subject+" Unit:"+props.koan;
+      }
     }else{
       editor.setValue("");
     }
