@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Editor</title>
+  <style type="text/css" media="screen">
+    #container {
+      position: relative;;
+    }
+    #editor {
+        position: absolute;
+        top: 0;
+        bottom:0;
+        left: 0;
+        right: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div style="height: 550px;" id="container">
+  <pre id="editor" height="100">
+      function foo(items) {
+          var i;
+          for (i = 0; i < items.length+1; i++) {
+              console.log("Ace Rocks " + items[i]);
+          }
+      }
+      foo(["eval","works","time","to work"]);
+  </pre>
+</div>
+
+
+
+<button onclick="doit()">Run</button>
+<br/>
+<br/>
+<div id="out" style="font-family: 'Lucida Console', Monaco, monospace">
+hola
+</div>
+
+
+<script src="src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/twilight");
+    editor.session.setMode("ace/mode/javascript");
+    editor.resize();
+
+    var whomadethis = "lau";
+    var url_string = location.href;
+    var url = new URL(url_string);
+    var c = url.searchParams.get("code");
+    editor.setValue(c);
+    
+    console.oldLog = console.log;
+    console.log = function(value)
+    {
+        console.oldLog(value);
+        document.getElementById("out").innerText += value+"\n";
+    };
+
+
+    function doit(){
+        document.getElementById("out").innerText = "";
+        setTimeout( function() {
+          var code = "try{"+editor.session.getValue()+"}catch(e){console.log(e.stack);}";
+          eval( code);
+          },300);  
+    }
+</script>
+
+
+</body>
+</html>
