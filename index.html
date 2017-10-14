@@ -52,8 +52,11 @@ hola
     var url_string = location.href;
     var url = new URL(url_string);
     var c = url.searchParams.get("code");
-    editor.setValue(c);
-    
+    if(c){
+      editor.setValue(c);
+    }else{
+      editor.setValue("");
+    }
     console.oldLog = console.log;
     console.log = function(value)
     {
