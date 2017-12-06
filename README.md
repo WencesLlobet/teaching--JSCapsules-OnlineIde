@@ -1,6 +1,6 @@
 # Online Javascript Ide and Learning Capsules to teach Javascript
 
-![alt text](https://github.com/LauLLobet/https://github.com/LauLlobet/teaching--JSCapsules-OnlineIde/raw/master/capture.png "Logo Title Text 1")
+![alt text](https://github.com/LauLlobet/teaching--JSCapsules-OnlineIde/raw/master/capture.png "Logo Title Text 1")
 
 
 
