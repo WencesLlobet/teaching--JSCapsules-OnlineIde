@@ -1,6 +1,11 @@
 # Online Javascript Ide and Learning Capsules to teach Javascript
 
+![alt text](https://github.com/LauLLobet/https://github.com/LauLlobet/teaching--JSCapsules-OnlineIde/raw/master/capture.png "Logo Title Text 1")
+
+
+
 Click on any capsule to see it working (Spanish):
+
 
 
 [Nivel:1 Tema:0_visibilidad_de_variables Koan:1](http://www.laucoding.com/index.html?code=U2FsdGVkX19GCVu/uvMEABryG9WLk4iN8bDvt1ShaNKeQv117PZTDjH5pYYWTPK1QUZSlEASD%2BZNodPll%2BU7RPM1Lxlbdhh2pSNRJDQjTspEE23lcTvfIa4WGEDErYyEbBjLED5Jzxrv5l9Bex33h%2BZlG%2BLznmn13IJPUardC5x9mpEq3Vx2bkXJ3u8ICbIxtZinq5VgV9vnFLV2so%2BcAFywZXTLZoSsgKBVjWNFaQVnM4x3Mk6/oHDfDe1ZX3GexdkKwNIcFxeLa1YDUwdzs7nqd98vy5nOvN1yQg34fKYsNuWbzfBfEu2o0ICz87RXkqpsac2s%2B%2BFSPbQWHWCmbSeDe7EXKLm%2BABJhZlF0hOc=&props=var%20props%20=%20%7B%22level%22:%221%22,%22subject%22:%220_visibilidad_de_variables%22,%22koan%22:%221%22%7D;%0A)
